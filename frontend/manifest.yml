@@ -1,0 +1,6 @@
+---
+applications:
+- name: frontend
+  env:
+    NODE_TLS_REJECT_UNAUTHORIZED: 0
+    BACKEND_URL: https://backend.apps.internal:8080

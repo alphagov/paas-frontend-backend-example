@@ -1,0 +1,5 @@
+---
+applications:
+- name: backend
+  routes:
+  - route: backend.apps.internal
