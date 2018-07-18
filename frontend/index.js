@@ -3,7 +3,7 @@ const request = require('request-promise-native')
 
 const app = express();
 
-const backendUrl = process.env.BACKEND_URL || 'https://localhost:3001'
+const backendUrl = process.env.BACKEND_URL || 'http://localhost:3001'
 
 app.all('*', (req, res) => {
 	request.get(backendUrl).then((response) => {
