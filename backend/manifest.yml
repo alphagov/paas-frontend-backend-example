@@ -1,6 +1,0 @@
----
-applications:
-- name: backend
-  health-check-type: http
-  routes:
-  - route: backend.apps.internal
