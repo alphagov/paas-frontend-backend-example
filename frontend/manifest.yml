@@ -1,0 +1,5 @@
+---
+applications:
+- name: paas-frontend-backend-example-frontend
+  memory: 256M
+
