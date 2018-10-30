@@ -1,6 +1,5 @@
 ---
 applications:
-- name: frontend
-  env:
-    NODE_TLS_REJECT_UNAUTHORIZED: 0
-    BACKEND_URL: http://backend.apps.internal:8080
+- name: gac-frontend
+  memory: 256M
+

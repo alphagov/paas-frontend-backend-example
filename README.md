@@ -1,19 +1,40 @@
 paas-frontend-backend-example
 =============================
 
-This is a super-simple examlpe of an app with a frontend (which should be
-accessible on the internet) and a backend (which should not be) running on The
-Government PaaS.
+This is an example of a simple pair of microservices which you can deploy to GOV.UK PaaS.
 
-Getting Started
----------------
+The backend picks a random image from a subset of the Government Art Collection and the frontend renders a page with the image. Both the frontend and the backend are ruby applications using Sinatra.
 
-* Make sure that your cloud foundry deployment is using bosh-dns, has service
-  discovery set up, and has local_dns enabled, and  that the `apps.internal`
-  domain has been created.
-* `cd backend && cf push`
-* `cd frontend && cf push`
-* `cf add-network-policy frontend --destination-app backend`
-* `curl https://frontend.$your-env.dev.cloudpipelineapps.digital/`
+This is a simple example for us to use in user research into running microservices on the PaaS.
 
+Deploying the apps
+------------------
+
+To deploy the backend:
+
+```
+cd backend
+cf push
+```
+
+To deploy the frontend:
+
+```
+cd frontend
+cf push --no-start
+cf set-env gac-frontend BACKEND_URL https://gac-backend.cloudapps.digital
+cf start gac-frontend
+```
+
+Changing the URL of the backend:
+
+```
+cf set-env gac-frontend BACKEND_URL http://your-new-url
+cf restart gac-frontend
+```
+
+Using private networking
+------------------------
+
+See the documentation provided.
 

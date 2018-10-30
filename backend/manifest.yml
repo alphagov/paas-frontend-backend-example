@@ -1,6 +1,5 @@
 ---
 applications:
-- name: backend
-  health-check-type: http
-  routes:
-  - route: backend.apps.internal
+- name: gac-backend
+  memory: 256M
+
