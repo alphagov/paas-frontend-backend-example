@@ -1,5 +1,5 @@
 ---
 applications:
-- name: paas-frontend-backend-example-backend
+- name: gac-backend
   memory: 256M
 

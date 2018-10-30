@@ -22,15 +22,15 @@ To deploy the frontend:
 ```
 cd frontend
 cf push --no-start
-cf set-env paas-frontend-backend-example-frontend BACKEND_URL https://paas-frontend-backend-example-backend.cloudapps.digital
-cf start paas-frontend-backend-example-frontend
+cf set-env gac-frontend BACKEND_URL https://gac-backend.cloudapps.digital
+cf start gac-frontend
 ```
 
 Changing the URL of the backend:
 
 ```
-cf set-env paas-frontend-backend-example-frontend BACKEND_URL http://your-new-url
-cf restart paas-frontend-backend-example-frontend
+cf set-env gac-frontend BACKEND_URL http://your-new-url
+cf restart gac-frontend
 ```
 
 Using private networking
