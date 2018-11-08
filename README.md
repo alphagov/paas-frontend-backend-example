@@ -12,4 +12,4 @@ This is a simple example for us to use in user research into running microservic
 Deploying the apps
 ------------------
 
-See https://paas-tech-docs-user-research.cloudapps.digital/deploying_apps.html#deploying-apps
+See https://paas-tech-docs-user-research.cloudapps.digital/
